@@ -1,4 +1,4 @@
-$(document).ready(function() {
+(function () {
 	
 	// For error checking, I want a list of all of the links.
 	var links = document.getElementsByTagName("a"), linklist = [];
@@ -32,4 +32,4 @@ $(document).ready(function() {
 
 	    }
    })
-});
+}());
