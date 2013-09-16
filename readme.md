@@ -22,7 +22,7 @@ How-to:
 
 3. Go to a webpage, like your Feedly Feed, and middleclick your new bookmark.
 
-4. If your web browser says "X has prevented this site from opening Y pop-up windows" then you can override it with the options button that appears.
+4. If your web browser says "X has prevented this site from opening Y pop-up windows" then you can override it with the options button that appears. Pop-up settings for <a href="https://support.mozilla.org/en-US/kb/pop-blocker-settings-exceptions-troubleshooting">Firefox</a>  and <a href="https://support.google.com/chrome/answer/95472?hl=en">Chrome</a>. 
 
 Extra:
 ------
