@@ -1,0 +1,1 @@
+javascript:(function(){function r(e){var t={};for(var n=0;n<e.length;n++)t[e[n]]=true;var r=[];for(var i in t)r.push(i);return r}var e=document.getElementsByTagName("a"),t=[];for(var n in e){if(!/feedly.com/i.exec(e[n].href)){t.push(e[n].href)}}t=r(t);for(var n=0;n<t.length-1;n++){window.open(t[n],"_blank")}})()
