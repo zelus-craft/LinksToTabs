@@ -5,7 +5,7 @@ Links to Tabs
 Description
 -----------
 
-Sometimes you really just want to open every link in a Feedly Feed in new tabs.
+Sometimes you really just want to open every link in a Feedly feed in new tabs at once. Now you can with this Javascript bookmarklet! 
 
 How-to:
 -----------
