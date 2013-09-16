@@ -12,11 +12,12 @@ How-to:
 
 1. Make a bookmark and give it a title and description so you don't forget what it is.
 
-2. Use this bookmark location:
-
+2. Use this bookmark location.
+	```js
 	javascript: (function (){var jsCode = document.createElement('script'); jsCode.setAttribute('id', 'openLinksInTabs.js'); jsCode.setAttribute('src', 'https://raw.github.com/zelus-craft/LinksToTabs/master/openLinksInTabsMinified'); document.body.appendChild(jsCode); }());
+	```
 
-	https://raw.github.com/zelus-craft/LinksToTabs/master/img/Bookmark%20Tutorial.png
+ ![]https://raw.github.com/zelus-craft/LinksToTabs/master/img/Bookmark%20Tutorial.png
 
 
 3. Go to a webpage, like your Feedly Feed, and middleclick your new bookmark.
