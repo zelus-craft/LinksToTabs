@@ -1,14 +1,32 @@
 
-Usage:
+Links to Tabs
+=======================
 
-Make a bookmark and give it a title.
+Description
+-----------
+
+Sometimes you really just want to open every link in a Feedly Feed in new tabs.
+
+How-to:
+-----------
+
+1. Make a bookmark and give it a title and description so you don't forget what it is.
+
+2. Use this bookmark location:
+	javascript: (function (){var jsCode = document.createElement('script'); jsCode.setAttribute('id', 'openLinksInTabs.js'); jsCode.setAttribute('src', 'https://raw.github.com/zelus-craft/LinksToTabs/master/openLinksInTabsMinified'); document.body.appendChild(jsCode); }());
 
 
-/*
-Sometimes, I want to view all of a Feedly feed at once instead of dealing with Feedly's lackluster GUI.
+![Bookmark it!](zelus-craft.github.com/LinksToTabs/img/Bookmark%20Tutorial.png)
 
-Of course, this works with any RSS reader; just supplement the feedly.com bit with another hosts' url that you don't want to open.
+3. Go to a webpage, like your Feedly Feed, and middleclick your new bookmark.
 
-Warning: Your browser may crash when you try to open more than 15 urls/links/feeds at once.
-*/
+(4). If your web browser says *X prevented this site from opening Y pop-up windows.* then you can override it with the options button that appears.
 
+Extra:
+------
+
+If you use the following bookmark location with a specific hostname then that hostname's links will be ignored and will not be opened in new tabs.
+
+	javascript:(function(){function r(e){var t={};for(var n=0;n<e.length;n++)t[e[n]]=true;var r=[];for(var i in t)r.push(i);return r}var e=document.getElementsByTagName("a"),t=[];for(var n in e){if(!/**HOSTNAME HERE**/i.exec(e[n].href)){t.push(e[n].href)}}t=r(t);for(var n=0;n<t.length-1;n++){window.open(t[n],"_blank")}})()
+
+Warning: Your browser may crash when you try to open more than 30 links at once.
