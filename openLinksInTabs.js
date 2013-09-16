@@ -1,35 +1,27 @@
-(function () {
-	
-	// For error checking, I want a list of all of the links.
+javascript:(function(){
+
 	var links = document.getElementsByTagName("a"), linklist = [];
 
-	$("a[href^=http]").each(function(){
+	for(var i in links) {
+	    if(!(/feedly.com/i.exec(links[i].href))) {
+		        linklist.push(links[i].href);
+		}
+	}
 
-		//Don't want to open host's links all the time.
-		var excludes = [
-		'feedly.com',
-		'cloud.feedly.com'
-		];
-      	
-      	for(i=0; i<excludes.length; i++) {
-      		if(this.href.indexOf(excludes[i]) != -1) {
-      			return true; // continue each() with next link
-      		}
-    	}
+    function ArrNoDupe(array) {
+	    var temp = {};
+	    for (var i = 0; i < array.length; i++)
+	        temp[array[i]] = true;
+	    var r = [];
+	    for (var k in temp)
+	        r.push(k);
+	    return r;
+	}
 
-	    if(this.href.indexOf(location.hostname) == -1) {
+	unique_list = ArrNoDupe(linklist);
 
-	    	linklist.push(this.href.value);
+	for(var j in unique_list) {
+		window.open(unique_list[j], '_blank');
+	}
 
-		   	$(this).click(function() { return true; }); 
-
-		   	$(this).attr({
-		   		target: "_blank",
-		        title: "new tab"
-		    });
-
-	        $(this).click();
-
-	    }
-   })
 }());
