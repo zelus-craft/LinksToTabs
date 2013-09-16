@@ -1,13 +1,19 @@
+//"Anonymous" Javascript function. Needs the "javascript:" part for bookmarklet functionality.
 javascript:(function(){
 
-	var links = document.getElementsByTagName("a"), linklist = [];
+	//Create HTML object that holds <a> tag data from a page.
+	var links = document.getElementsByTagName("a");
+	//Create array for sanitized urls.
+	var linklist = [];
 
+	//Grind out the href data from the <a> tags that are not from feedly, and save them.
 	for(var i in links) {
 	    if(!(/feedly.com/i.exec(links[i].href))) {
 		        linklist.push(links[i].href);
 		}
 	}
 
+	//Function to remove dupliate data from an array.
     function ArrNoDupe(array) {
 	    var temp = {};
 	    for (var i = 0; i < array.length; i++)
@@ -18,10 +24,11 @@ javascript:(function(){
 	    return r;
 	}
 
-	unique_list = ArrNoDupe(linklist);
+	//Save the array of href data - now without duplicates.
+	linklist = ArrNoDupe(linklist);
 
-	for(var j in unique_list) {
-		window.open(unique_list[j], '_blank');
-	}
-
+	//Open each saved href url in a new tab.
+	for(var i = 0; i < linklist.length-1; i++) {
+			window.open(linklist[i], '_blank');
+		}
 }());
